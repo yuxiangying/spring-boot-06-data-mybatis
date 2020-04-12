@@ -1,8 +1,8 @@
 package com.atguigu.springboot.controller;
 
 
-import com.atguigu.springboot.bean.Department;
-import com.atguigu.springboot.bean.Employee;
+import com.atguigu.springboot.entity.Department;
+import com.atguigu.springboot.entity.Employee;
 import com.atguigu.springboot.mapper.DepartmentMapper;
 import com.atguigu.springboot.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,18 +22,18 @@ public class DeptController {
 
     @GetMapping("/dept/{id}")
     public Department getDepartment(@PathVariable("id") Integer id){
-        return departmentMapper.getDeptById(id);
+        return departmentMapper.selectByPrimaryKey(id);
     }
 
     @GetMapping("/dept")
     public Department insertDept(Department department){
-        departmentMapper.insertDept(department);
+        departmentMapper.insert(department);
         return department;
     }
 
     @GetMapping("/emp/{id}")
     public Employee getEmp(@PathVariable("id") Integer id){
-       return employeeMapper.getEmpById(id);
+       return employeeMapper.selectByPrimaryKey(id);
     }
 
 
