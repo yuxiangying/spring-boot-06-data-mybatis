@@ -271,7 +271,7 @@
    <!--    public Employee getEmpById(Integer id);
 
     public void insertEmp(Employee employee);-->
-    <select id="getEmpById" resultType="com.atguigu.springboot.bean.Employee">
+    <select id="getEmpById" resultType="com.atguigu.springboot.entity.Employee">
         SELECT * FROM employee WHERE id=#{id}
     </select>
 
