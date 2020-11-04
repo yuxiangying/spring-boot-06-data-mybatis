@@ -22,7 +22,7 @@
         <!-- 数据库连接，直接通过${}读取application.properties里的配置 -->
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/mybatis"
+                connectionURL="jdbc:mysql://localhost:3306/woman_skin"
                 userId="root"
                 password="admin"/>
 
@@ -45,16 +45,25 @@
             <property name="useActualColumnNames" value="false" />
 
         </table>-->
-        <table tableName="department">
-            <!-- 是否只生成POJO对象 -->
+        <!--<table tableName="department">
+            &lt;!&ndash; 是否只生成POJO对象 &ndash;&gt;
             <property name="modelOnly" value="false"/>
-            <!-- 数据库中表名有时我们都会带个前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
-            <!--<domainObjectRenamingRule searchString="^Tbl_" replaceString=""/>-->
-            <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate -->
+            &lt;!&ndash; 数据库中表名有时我们都会带个前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 &ndash;&gt;
+            &lt;!&ndash;<domainObjectRenamingRule searchString="^Tbl_" replaceString=""/>&ndash;&gt;
+            &lt;!&ndash; 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate &ndash;&gt;
             <property name="useActualColumnNames" value="false" />
 
         </table>
         <table tableName="employee">
+            &lt;!&ndash; 是否只生成POJO对象 &ndash;&gt;
+            <property name="modelOnly" value="false"/>
+            &lt;!&ndash; 数据库中表名有时我们都会带个前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 &ndash;&gt;
+            &lt;!&ndash;<domainObjectRenamingRule searchString="^Tbl_" replaceString=""/>&ndash;&gt;
+            &lt;!&ndash; 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate &ndash;&gt;
+            <property name="useActualColumnNames" value="false" />
+
+        </table>-->
+        <table tableName="t_applet_informate">
             <!-- 是否只生成POJO对象 -->
             <property name="modelOnly" value="false"/>
             <!-- 数据库中表名有时我们都会带个前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->

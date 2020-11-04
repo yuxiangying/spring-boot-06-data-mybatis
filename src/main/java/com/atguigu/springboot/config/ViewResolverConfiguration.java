@@ -29,7 +29,7 @@ public class ViewResolverConfiguration {
         @Bean
         public ViewResolver viewResolver() {
             InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-            resolver.setPrefix("/WEB-INF/jsp");
+            resolver.setPrefix("/WEB-INF/views");
             resolver.setSuffix(".jsp");
             resolver.setViewNames("*");//这里是设置该视图解析器所要匹配哪些格式的视图“*”代表匹配所有格式“
             resolver.setOrder(2);//优先级,Spring配置多个视图解析器，数字越小，优先级越高，越先匹配

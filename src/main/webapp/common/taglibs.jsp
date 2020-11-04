@@ -76,3 +76,8 @@ String webPath = request.getScheme()+"://"+request.getServerName()+":"+request.g
 	});
  });
  </script>--%>
+
+<link rel="stylesheet" type="text/css" href="${ctx }/static/css/common.css">
+<link rel="stylesheet" href="${ctx}/static/layui/css/layui.css">
+<script src="${ctx}/static/layui/layui.js"></script>
+<script src="${ctx}/static/js/jquery.min.js"></script>

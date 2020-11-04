@@ -1,10 +1,7 @@
 package com.atguigu.springboot.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -34,6 +31,12 @@ public class PageController {
         return modelAndView;
     }
 
+    @RequestMapping("/register")
+    public ModelAndView register() {
+        ModelAndView modelAndView = new ModelAndView("/register");
+        return modelAndView;
+    }
+    //登录页面
     @RequestMapping("/layout")
     public ModelAndView layout() {
         ModelAndView modelAndView = new ModelAndView("/layoutFrame");
@@ -51,4 +54,19 @@ public class PageController {
         ModelAndView modelAndView = new ModelAndView("/index2");
         return modelAndView;
     }
+
+    //微信小程序设置页面
+    @RequestMapping("/applet/appletPage")
+    public ModelAndView appletPage() {
+        ModelAndView modelAndView = new ModelAndView("/applet/appletPage");
+        return modelAndView;
+    }
+
+    //站点概况页面
+    @RequestMapping("/station/stationPage")
+    public ModelAndView stationPage() {
+        ModelAndView modelAndView = new ModelAndView("/station/stationPage");
+        return modelAndView;
+    }
+
 }
